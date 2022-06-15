@@ -14,7 +14,7 @@ export const useProduct = ({
   value = 0,
   initialValues,
 }: useProductArgs) => {
-  const [counter, setCounter] = useState<number>(initialValues?.count ?? value);
+  const [counter, setCounter] = useState<number>(initialValues?.count || value);
 
   const isMounted = useRef(false);
 
